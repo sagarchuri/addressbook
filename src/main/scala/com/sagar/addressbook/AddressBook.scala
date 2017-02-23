@@ -8,5 +8,5 @@ object AddressBook {
 
   def getAddressLines =  Source.fromInputStream(getClass.getResourceAsStream("/AddressBook.txt")).getLines.toList
 
-  def numberOfMales ={}
+  def numberOfMales = getAddressLines.filter(x => x.split(",")(1).trim == "Male").length
 }
