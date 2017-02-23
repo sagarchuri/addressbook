@@ -25,4 +25,5 @@ object AddressBook {
     dateFormat.parse(birthDate).toInstant.atZone(ZoneId.systemDefault).toLocalDate
   }
 
+  def dateDiff(d1:java.time.LocalDate, d2:java.time.LocalDate) =  d2.toEpochDay - d1.toEpochDay
 }
