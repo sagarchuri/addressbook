@@ -12,6 +12,10 @@ import com.sagar.addressbook.AddressBook._
 @RunWith(classOf[JUnitRunner])
 class AddressBookSuite extends FunSuite {
 
+  test("AddressBook - check number of males"){
+    assert(numberOfMales==3)
+  }
+
 
 
 }
