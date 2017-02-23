@@ -27,4 +27,12 @@ class AddressBookSuite extends FunSuite {
         == "20/09/80")
   }
 
+  test("AddressBook - check difference in birth days"){
+    val bill =getBirthDate("Bill McKnight")
+    val paul =getBirthDate("Paul Robinson")
+
+    assert(dateDiff(bill,paul) == 2862)
+
+  }
+
 }
