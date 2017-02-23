@@ -16,6 +16,8 @@ class AddressBookSuite extends FunSuite {
     assert(numberOfMales==3)
   }
 
-
+  test("AddressBook - check oldest"){
+    assert(oldestPerSon == "Wes Jackson")
+  }
 
 }
