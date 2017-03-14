@@ -1,29 +1,59 @@
-package com.sagar.addressbook
+package com.sagar
+
+import java.time.format.DateTimeFormatter
+import java.time.LocalDate
+
+import scala.util.Try
 
 /**
-  * Created by SAGAR on 23/02/2017.
+  * Created by SAGAR on 14/03/2017.
   */
 import scala.io.Source
-import java.time.ZoneId
 
 object AddressBook {
 
-  def getAddressLines =  Source.fromInputStream(getClass.getResourceAsStream("/AddressBook.txt")).getLines.toList
-
-  def numberOfMales = getAddressLines.filter(x => x.split(",")(1).trim == "Male").length
-
-  //using simpledateformat to convert to util.Date to enable natural ordering
-  def dateFormat = new java.text.SimpleDateFormat("dd/MM/yy")
-
-
-  def oldestPerSon =
-    getAddressLines.map(x => (x.split(",")(0), dateFormat.parse(x.split(",")(2).trim))).sortBy(x => x._2).head._1
-
-  def getBirthDate(name: String): java.time.LocalDate = {
-    val birthDate =
-      getAddressLines.filter(x => x.split(",")(0).trim.toLowerCase.equals(name.toLowerCase))(0).split(",")(2)
-    dateFormat.parse(birthDate).toInstant.atZone(ZoneId.systemDefault).toLocalDate
+  def readAddress(file: Source) = {
+    file.getLines().toList.map(_.split(",")).
+      map(d => new Person(d(0).trim, d(1).trim, DateFormat(d(2).trim)))
   }
 
-  def dateDiff(d1:java.time.LocalDate, d2:java.time.LocalDate) =  d2.toEpochDay - d1.toEpochDay
+  case class DateFormat(date: LocalDate)
+
+  object DateFormat {
+    val dateFormat = DateTimeFormatter.ofPattern("dd/MM/yy")
+
+    def apply(date: String): DateFormat = new DateFormat(parse(date))
+
+    def parse(date: String) = LocalDate.parse(date, dateFormat)
+  }
+
+  def main(args: Array[String]) {
+    val addressBook = AddressBook(readAddress(Source.fromFile("/AdressBook.txt")))
+    println(addressBook.oldestPerSon)
+    println(addressBook.dateDiff("Bill McKnight", "Paul Robinson"))
+  }
+
+  sealed case class Person(name: String, gender: String, dob: DateFormat)
+
+  object Person {
+    implicit def orderByDate[A <: Person]: Ordering[Person] = Ordering.by(_.dob.date.toEpochDay)
+  }
+
+  case class AddressBook(contacts: List[Person]) {
+
+    def numberOfMales = numberByGender.getOrElse("Male", 0)
+
+    def numberByGender = contacts.groupBy(_.gender).mapValues(_.length)
+
+    def oldestPerSon = Try(contacts.sorted.head).toOption
+
+    def getBirthDate(name: String) =  Try(contacts.filter(_.name == name).head.dob).toOption
+
+    def dateDiff(n1: String, n2: String) =
+      for {
+        d1 <- getBirthDate(n1)
+        d2 <- getBirthDate(n2)
+      } yield (d1.date.toEpochDay - d2.date.toEpochDay)
+  }
+
 }
