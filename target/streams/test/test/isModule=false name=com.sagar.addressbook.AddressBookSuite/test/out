@@ -1,3 +1,5 @@
 [0m[[0minfo[0m] [0m[32mAddressBookSuite:[0m[0m
-[0m[[0minfo[0m] [0m[31m- AddressBook - check number of males *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  <(), the Unit value> did not equal 3 (AddressSuite.scala:16)[0m[0m
+[0m[[0minfo[0m] [0m[32m- AddressBook - check number of males[0m[0m
+[0m[[0minfo[0m] [0m[32m- AddressBook - check oldest[0m[0m
+[0m[[0minfo[0m] [0m[32m- AddressBook - check birthdate[0m[0m
+[0m[[0minfo[0m] [0m[32m- AddressBook - check difference in birth days[0m[0m

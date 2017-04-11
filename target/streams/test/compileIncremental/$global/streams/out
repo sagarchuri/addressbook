@@ -1,10 +1,17 @@
+[0m[[0mdebug[0m] [0mThe com.sagar.addressbook.AddressBook$ source file has the following regular definitions changed:[0m
+[0m[[0mdebug[0m] [0m	dateDiff, getBirthDate.[0m
+[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mFiles invalidated by inheriting from (external) com.sagar.addressbook.AddressBook$: Set(); now invalidating by inheritance (internally).[0m
+[0m[[0mdebug[0m] [0mGetting direct dependencies of all sources transitively invalidated by inheritance.[0m
+[0m[[0mdebug[0m] [0mGetting sources that directly depend on (external) com.sagar.addressbook.AddressBook$.[0m
+[0m[[0mdebug[0m] [0mNone of the modified names appears in C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala. This dependency is not being considered for invalidation.[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
-[0m[[0mdebug[0m] [0m	added: Set(C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala)[0m
-[0m[[0mdebug[0m] [0m	modified: Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala)[0m
 [0m[[0mdebug[0m] [0mRemoved products: Set()[0m
-[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set(NamesChange(com.sagar.addressbook.AddressBook$,ModifiedNames(regularNames = dateDiff, getBirthDate, implicitNames = )))[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala)[0m
 [0m[[0mdebug[0m] [0m[0m
@@ -17,25 +24,14 @@
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to C:\scala\addressbook\target\scala-2.11\test-classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 7cc767c6, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 65e6a7f3, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
 [0m[[0mdebug[0m] [0m	-bootclasspath[0m
 [0m[[0mdebug[0m] [0m	C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes;C:\Users\VRUSH\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	C:\scala\addressbook\target\scala-2.11\test-classes;C:\scala\addressbook\target\scala-2.11\classes;C:\Users\VRUSH\.ivy2\cache\org.scalactic\scalactic_2.11\bundles\scalactic_2.11-3.0.1.jar;C:\Users\VRUSH\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.8.jar;C:\Users\VRUSH\.ivy2\cache\junit\junit\jars\junit-4.10.jar;C:\Users\VRUSH\.ivy2\cache\org.hamcrest\hamcrest-core\jars\hamcrest-core-1.1.jar;C:\Users\VRUSH\.ivy2\cache\org.scalatest\scalatest_2.11\bundles\scalatest_2.11-3.0.1.jar;C:\Users\VRUSH\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.5.jar;C:\Users\VRUSH\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.4.jar[0m
-[0m[[33mwarn[0m] [0mC:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala:16: comparing values of types Unit and Int using `==' will always yield false[0m
-[0m[[33mwarn[0m] [0m    assert(numberOfMales==3)[0m
-[0m[[33mwarn[0m] [0m          ^[0m
-[0m[[33mwarn[0m] [0mone warning found[0m
-[0m[[0mdebug[0m] [0mScala compilation took 2.131812098 s[0m
-[0m[[0mdebug[0m] [0mInvalidating C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala...[0m
-[0m[[0mdebug[0m] [0mInvalidating (transitively) by inheritance from C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala...[0m
-[0m[[0mdebug[0m] [0mInitial set of included nodes: Set(C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala)[0m
-[0m[[0mdebug[0m] [0mInvalidated by transitive inheritance dependency: Set(C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala)[0m
-[0m[[0mdebug[0m] [0mThe C:\scala\addressbook\src\test\scala\com\sagar\addressbook\AddressSuite.scala source file has the following implicit definitions changed:[0m
-[0m[[0mdebug[0m] [0m	unconstrainedEquality, convertToEqualizer.[0m
-[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
+[0m[[0mdebug[0m] [0mScala compilation took 0.887238117 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

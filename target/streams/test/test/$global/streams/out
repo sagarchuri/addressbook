@@ -1,9 +1,8 @@
-[0m[[0mdebug[0m] [0mRunning TaskDef(com.sagar.addressbook.AddressBookSuite, org.scalatest.tools.Framework$$anon$1@177f07c0, false, [SuiteSelector])[0m
-[0m[[0minfo[0m] [0m[36mRun completed in 376 milliseconds.[0m[0m
-[0m[[0minfo[0m] [0m[36mTotal number of tests run: 1[0m[0m
+[0m[[0mdebug[0m] [0mRunning TaskDef(com.sagar.addressbook.AddressBookSuite, org.scalatest.tools.Framework$$anon$1@49d9cefe, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[36mRun completed in 315 milliseconds.[0m[0m
+[0m[[0minfo[0m] [0m[36mTotal number of tests run: 4[0m[0m
 [0m[[0minfo[0m] [0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0minfo[0m] [0m[36mTests: succeeded 0, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0minfo[0m] [0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[31merror[0m] [0mFailed tests:[0m
-[0m[[31merror[0m] [0m	com.sagar.addressbook.AddressBookSuite[0m
-[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0minfo[0m] [0m[36mTests: succeeded 4, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0minfo[0m] [0m[32mAll tests passed.[0m[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	com.sagar.addressbook.AddressBookSuite[0m
